@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function playSound() {
         const audio = new Audio('sound/pipe.mp3');
-        audio.volume = 0.5; // Adjust volume level (0.0 to 1.0)
+        audio.volume = 0.5; 
         audio.play();
     }
 
