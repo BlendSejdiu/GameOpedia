@@ -1,8 +1,11 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #007BA7;
     color: #fff;
+    padding-bottom: 80px; 
 }
 
 header {
@@ -23,9 +26,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 90px; 
+    padding-top: 30px; 
 }
-
 
 .slider {
     overflow: hidden;
@@ -47,16 +49,80 @@ header {
     object-fit: contain;
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 40px; 
+    padding: 20px;
+}
+
+.card {
+    background-color: #005f73;
+    border-radius: 15px;
+    padding: 30px;
+    width: 700px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 15px 0;
+}
+
+.card button {
+    background-color: #0a9396;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #94d2bd;
+}
+
 #toTop {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     z-index: 9999;
-    display: none;
+    display: block;
+}
+
+#toTop img {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    background-color: #005f73;
+    text-align: center;
+    padding: 10px; 
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo {
+    max-width: 30px;
+    height: auto;
+}
+
+footer p {
+    margin: 5px 0 0;
+    color: #fff;
 }
 
 .black-screen {
