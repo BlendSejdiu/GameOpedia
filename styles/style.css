@@ -213,3 +213,21 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+}
+.bottom-image-container {
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.bottom-image-container img {
+    max-width: 100%;
+}
