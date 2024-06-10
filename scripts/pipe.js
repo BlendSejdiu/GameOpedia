@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
 
     function isScrolledToBottom() {
-        return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+        return window.innerHeight + window.scrollY >= document.body.scrollHeight;
     }
 
     async function playSound() {
@@ -16,32 +16,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const blackScreen = document.createElement('div');
         blackScreen.classList.add('black-screen');
         body.appendChild(blackScreen);
-        // Trigger reflow to apply CSS transition
         blackScreen.offsetHeight;
-        blackScreen.style.opacity = '1'; // Make the screen fully opaque
-        await new Promise(resolve => setTimeout(resolve, 0)); // Wait for the transition
+        blackScreen.style.opacity = '1'; 
+        await new Promise(resolve => setTimeout(resolve, 0)); 
     }
 
     function removeBlackScreen() {
         const blackScreen = document.querySelector('.black-screen');
         if (blackScreen) {
-            blackScreen.style.opacity = '0'; // Make the screen transparent
+            blackScreen.style.opacity = '0'; 
             setTimeout(() => {
                 blackScreen.parentNode.removeChild(blackScreen);
-            }, 500); // Remove after transition duration
+            }, 500); 
         }
     }
 
     window.addEventListener('scroll', () => {
         if (isScrolledToBottom()) {
-            toTopButton.style.display = 'block'; // Display the button when scrolled to bottom
+            toTopButton.style.display = 'block'; 
+        } else if (window.pageYOffset > 750) {
+            toTopButton.style.display = 'block'; 
         } else {
-            toTopButton.style.display = 'none'; // Hide the button when not at the bottom
+            toTopButton.style.display = 'none'; 
         }
     });
 
     toTopButton.addEventListener('click', async () => {
-         playSound(); // Wait for sound to finish playing
+         playSound(); 
         await showBlackScreen();
 
         window.scrollTo({
@@ -51,6 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             removeBlackScreen();
-        }, 1000); // Adjust duration as needed
+        }, 1000);
     });
 });

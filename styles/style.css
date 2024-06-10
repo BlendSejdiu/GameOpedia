@@ -117,10 +117,10 @@ header {
 }
 
 footer {
-    background-color: #005f73;
+    background-color: darkgreen;
     text-align: center;
-    padding: 10px; 
-    height: 50px;
+    padding: 9px;
+    height: 48px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -146,4 +146,70 @@ footer p {
     z-index: 9999;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.learn-card {
+    background-color: #005f73;
+    border-radius: 15px;
+    padding: 30px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.learn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.learn-card:first-child {
+    transition-delay: 0.2s; 
+}
+
+.learn-card:nth-child(2) {
+    transition-delay: 0.3s; 
+}
+
+.learn-card:nth-child(3) {
+    transition-delay: 0.43; 
+}
+.learn-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.learn-card h3 {
+    margin-top: 0;
+}
+
+.video-container {
+    margin: 15px 0;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.learn-card p {
+    margin: 15px 0;
+}
+
+.learn-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.learn-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
