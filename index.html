@@ -8,12 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
 </head>
 <body>
+    <script>
+        (async () => {
+            const app = new PIXI.Application({ backgroundColor: 0x1099bb, resizeTo: window });
+            document.body.appendChild(app.view);
+
+            const defaultIcon = 'url("https://pixijs.com/assets/bunny.png"),auto';
+            const hoverIcon = 'url("https://pixijs.com/assets/bunny_saturated.png"),auto';
+
+            app.renderer.events.cursorStyles.default = defaultIcon;
+            app.renderer.events.cursorStyles.hover = hoverIcon;
+
+            
+        })();
+    </script>
     
     <header>
-        <img src="img/logo.png" alt="Game O' Pedia Logo" class="logo">
+        <img src="img/logo.png" alt="Game O' Pedia Logo"  onclick="location.href='index.html'" class="logo">
         <div class="title">Game O' Pedia</div>
     </header>
 
@@ -66,6 +80,7 @@
 
     <script src="scripts/slider.js"></script>
     <script src="scripts/pipe.js"></script>
+    
     
 </body>
 </html>

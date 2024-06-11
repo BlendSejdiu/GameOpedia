@@ -1,12 +1,12 @@
 body {
-    position: relative; /* Added to allow absolute positioning within the body */
+    position: relative; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #333;
+    background-color: #007BA7;
     color: #fff;
     font-family: Arial, sans-serif;
 }
@@ -24,7 +24,7 @@ body {
 #gameOverText {
     padding-top: 20px;
     position: absolute;
-    top: calc(50% - 40px); /* Adjusted position to center above the score */
+    top: calc(50% - 40px); 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -57,15 +57,15 @@ canvas {
 
 #startButton {
     margin-bottom: 20px;
-    width: 150px; /* Added width */
-    text-align: center; /* Center the text */
+    width: 150px; 
+    text-align: center; 
 }
 .button {
     padding: 10px 20px;
     font-size: 18px;
     border: none;
     border-radius: 25px;
-    background-color: #01796f; /* Changed to pine green */
+    background-color: #01796f;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -74,5 +74,5 @@ canvas {
 }
 
 .button:hover {
-    background-color: #015955; /* Darker shade of green on hover */
+    background-color: #015955; 
 }
